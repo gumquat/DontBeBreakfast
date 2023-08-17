@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=5 format=3 uid="uid://b44b5frofthck"]
 
 [ext_resource type="Texture2D" uid="uid://vv1ijbasb1b2" path="res://maps/tiles_packed.png" id="1_nxytq"]
@@ -567,3 +568,8 @@ texture = ExtResource("2_rtu1k")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(-13, 580)
 polygon = PackedVector2Array(13, -3, 751, -3, 750, 50, 841, 50, 842, -2, 921, -2, 949, -3, 949, 15, 1074, 15, 1074, -4, 1238, -3, 1238, -21, 1274, -21, 1274, -40, 1310, -40, 1310, -57, 1364, -57, 1364, -75, 1488, -75, 1488, -57, 1542, -57, 1542, -39, 1578, -38, 1578, -21, 1614, -22, 1614, -3, 2029, -2, 2028.41, 32.4729, 2047, 32, 2047, 50, 2174, 50, 2173, 32, 2191, 32, 2191, -3, 2388, -3, 2388, 79, 2027, 81, 2028, 56, 1615, 49, 1579, 1, 1542, 0, 1487, -2, 1368, -6, 1310, 15, 1241, 104, 1077, 104, 948, 103, 845, 103, 747, 103, 15, 105)
+=======
+[gd_scene format=3 uid="uid://bkqufb4wllix3"]
+
+[node name="map_001" type="Node2D"]
+>>>>>>> Stashed changes
