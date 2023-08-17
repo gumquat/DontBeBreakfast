@@ -14,3 +14,7 @@ config/name="DontBeBreakfast"
 run/main_scene="res://maps/map.001.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
+
+[rendering]
+
+environment/defaults/default_clear_color=Color(0.541176, 0.654902, 0.980392, 1)
