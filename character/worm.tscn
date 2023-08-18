@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsoov74l0rgpc"]
+
+[ext_resource type="Texture2D" uid="uid://o7drf1hcljrl" path="res://art assets/worm.png" id="1_yf1wd"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1175, 0.1175)
+texture = ExtResource("1_yf1wd")
