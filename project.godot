@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="DontBeBreakfast"
-run/main_scene="res://maps/TEST_MAP.tscn"
+run/main_scene="res://maps/map.001.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://art assets/icon.svg"
 
