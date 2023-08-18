@@ -1,9 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://dsoov74l0rgpc"]
+[gd_scene load_steps=4 format=3 uid="uid://d4dsvhp76wd8f"]
 
-[ext_resource type="Texture2D" uid="uid://o7drf1hcljrl" path="res://art assets/worm.png" id="1_yf1wd"]
+[ext_resource type="Script" path="res://scripts/worm.gd" id="1_3tywe"]
+[ext_resource type="Texture2D" uid="uid://bhalw4cf0am7" path="res://art assets/worm.png" id="1_yf1wd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ge4vb"]
+size = Vector2(305, 301)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_3tywe")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.1175, 0.1175)
+position = Vector2(0, -152)
 texture = ExtResource("1_yf1wd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.5, -151)
+shape = SubResource("RectangleShape2D_ge4vb")
