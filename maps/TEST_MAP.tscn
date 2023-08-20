@@ -6,7 +6,7 @@
 [node name="TEST_MAP" type="Node2D"]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_il3x6")]
-position = Vector2(579, 300)
+position = Vector2(558, 539)
 
 [node name="floorBlock" parent="." instance=ExtResource("2_vr35k")]
-position = Vector2(577, 568)
+position = Vector2(568, 598)
