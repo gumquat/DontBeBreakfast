@@ -666,5 +666,5 @@ scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_0nxrc")
 animation = &"derek_sun"
 autoplay = "derek_sun"
-frame_progress = 0.15459
+frame_progress = 0.0911421
 speed_scale = 0.5
