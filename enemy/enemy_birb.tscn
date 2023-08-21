@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bu5fkjm5ptmoe"]
 
 [ext_resource type="Texture2D" uid="uid://yhu5gw8jlh7o" path="res://art assets/birb_image.png" id="1_j6iwq"]
-[ext_resource type="Script" path="res://enemy/enemy_birb.gd" id="1_xrk85"]
+[ext_resource type="Script" path="res://scripts/enemy_birb.gd" id="1_xrk85"]
 
 [sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_udbq4"]
 length = 109.47
