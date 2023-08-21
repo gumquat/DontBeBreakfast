@@ -16,29 +16,34 @@ func _physics_process(delta):
 	# gravity!!!
 	if not is_on_floor():
 		velocity.y += gravity * delta
+		
+	#FIND HOW TO IMPLEMENT THIS	BETTER
+	if velocity.x != 0 and is_on_floor():
+		if !walking.playing:
+			$walking.play()
+		elif walking.playing:
+			$walking.stop()
 
 	# jump handling
-	if Input.is_action_pressed("ui_accept") and is_on_floor():
+	if Input.is_action_pressed("jump") and is_on_floor():
 		$jump.play()
 		velocity.y = JUMP_VELOCITY
 		
 	# gets players input direction and handles the movement
 	# DO LATER --> replace UI actions with custom gameplay actions
-	var direction = Input.get_axis("ui_left", "ui_right")
+	var direction = Input.get_axis("move_left", "move_right")
 	if direction < 0:
 		flipPoint.scale.x = -1
 	elif direction > 0:
 		flipPoint.scale.x = 1
 	if direction:
 		velocity.x = direction * SPEED
-		$walking.play()
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		
 	move_and_slide()
 
-
-
+							#DEATH TRIGGERS
 func _on_spikes_body_entered(body):
 	get_tree().change_scene_to_file("res://scenes/GameOver.tscn")
 
