@@ -16,13 +16,6 @@ func _physics_process(delta):
 	# gravity!!!
 	if not is_on_floor():
 		velocity.y += gravity * delta
-		
-	#FIND HOW TO IMPLEMENT THIS	BETTER
-	if velocity.x != 0 and is_on_floor():
-		if !walking.playing:
-			$walking.play()
-		elif walking.playing:
-			$walking.stop()
 
 	# jump handling
 	if Input.is_action_pressed("jump") and is_on_floor():
@@ -41,9 +34,16 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		
+#	FIND HOW TO IMPLEMENT THIS	BETTER
+	if velocity.x != 0 and is_on_floor():
+		if !walking.playing:
+			$walking.play()
+		elif walking.playing:
+			$walking.stop()
+		
 	move_and_slide()
 
-							#DEATH TRIGGERS
+#	DEATH TRIGGERS
 func _on_spikes_body_entered(body):
 	get_tree().change_scene_to_file("res://scenes/GameOver.tscn")
 
