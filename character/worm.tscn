@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://d4dsvhp76wd8f"]
+[gd_scene load_steps=6 format=3 uid="uid://d4dsvhp76wd8f"]
 
 [ext_resource type="Script" path="res://scripts/worm.gd" id="1_3tywe"]
 [ext_resource type="Texture2D" uid="uid://bhalw4cf0am7" path="res://art assets/worm.png" id="1_yf1wd"]
+[ext_resource type="AudioStream" uid="uid://broh4wcqd7erq" path="res://sfx/walking.wav" id="3_7qnek"]
+[ext_resource type="AudioStream" uid="uid://c6ieth4c426id" path="res://sfx/jump.wav" id="3_jt0md"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ge4vb"]
 size = Vector2(305, 301)
@@ -18,3 +20,9 @@ texture = ExtResource("1_yf1wd")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2.5, -151)
 shape = SubResource("RectangleShape2D_ge4vb")
+
+[node name="jump" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_jt0md")
+
+[node name="walking" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_7qnek")

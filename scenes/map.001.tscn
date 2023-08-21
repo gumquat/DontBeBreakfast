@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b44b5frofthck"]
+[gd_scene load_steps=12 format=3 uid="uid://b44b5frofthck"]
 
 [ext_resource type="Texture2D" uid="uid://vv1ijbasb1b2" path="res://art assets/tiles_packed.png" id="1_v0b4o"]
 [ext_resource type="Texture2D" uid="uid://yhu5gw8jlh7o" path="res://art assets/birb_image.png" id="2_j7wwk"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bu5fkjm5ptmoe" path="res://enemy/enemy_birb.tscn" id="4_imf3w"]
 [ext_resource type="Texture2D" uid="uid://bh7vs1rclexi" path="res://art assets/Untitled_design.png" id="5_o8hxw"]
 [ext_resource type="Texture2D" uid="uid://bj70fgiclsp27" path="res://art assets/Derek_Sun.png" id="6_x7vwd"]
+[ext_resource type="AudioStream" uid="uid://nwjjgrqle61r" path="res://sfx/Funny_Chase_Music_A_-_David_Fesliyan.mp3" id="7_dvayh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3x04i"]
 texture = ExtResource("1_v0b4o")
@@ -672,3 +673,7 @@ animation = &"derek_sun"
 autoplay = "derek_sun"
 frame_progress = 0.0911421
 speed_scale = 0.5
+
+[node name="music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_dvayh")
+autoplay = true

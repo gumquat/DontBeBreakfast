@@ -1,5 +1,8 @@
 extends CharacterBody2D
 
+@onready var jump = $jump
+@onready var walking = $walking
+
 
 const SPEED = 150.0
 const JUMP_VELOCITY = -300.0
@@ -9,20 +12,22 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
 func _physics_process(delta):
-	# Add the gravity.
+	# gravity!!!
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
-	# Handle Jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	# jump handling
+	if Input.is_action_pressed("ui_accept") and is_on_floor():
+		$jump.play()
 		velocity.y = JUMP_VELOCITY
-
-	# Get the input direction and handle the movement/deceleration.
-	# DO LATER --> replace UI actions with custom gameplay actions.
+		
+	# gets players input direction and handles the movement
+	# DO LATER --> replace UI actions with custom gameplay actions
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
+		$walking.play()
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+		
 	move_and_slide()
