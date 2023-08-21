@@ -659,9 +659,8 @@ navigation_polygon = SubResource("NavigationPolygon_2djaj")
 [node name="NavTarget" type="Marker2D" parent="."]
 position = Vector2(2255, 451)
 
-[node name="EnemyBirb" parent="." node_paths=PackedStringArray("movement_target") instance=ExtResource("4_h6wmr")]
+[node name="EnemyBirb" parent="." instance=ExtResource("4_h6wmr")]
 position = Vector2(-311, 267)
-movement_target = NodePath("../NavTarget")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 show_behind_parent = true
