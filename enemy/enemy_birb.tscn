@@ -3,10 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://yhu5gw8jlh7o" path="res://art assets/birb_image.png" id="1_j6iwq"]
 [ext_resource type="Script" path="res://enemy/enemy_birb.gd" id="1_xrk85"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_g1myu"]
-radius = 48.0104
+[sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_udbq4"]
+length = 72.0426
 
 [node name="EnemyBirb" type="CharacterBody2D" node_paths=PackedStringArray("navigation_agent")]
+motion_mode = 1
+safe_margin = 0.001
 script = ExtResource("1_xrk85")
 navigation_agent = NodePath("NavigationAgent2D")
 
@@ -16,8 +18,10 @@ scale = Vector2(0.05, 0.05)
 texture = ExtResource("1_j6iwq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(23, 10)
-shape = SubResource("CircleShape2D_g1myu")
+position = Vector2(25, 11)
+rotation = -0.558505
+scale = Vector2(1.13, 1.13)
+shape = SubResource("SeparationRayShape2D_udbq4")
 one_way_collision_margin = 0.0
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]

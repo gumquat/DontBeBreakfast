@@ -17,4 +17,5 @@ config/icon="res://art assets/icon.svg"
 
 [rendering]
 
+renderer/rendering_method="gl_compatibility"
 environment/defaults/default_clear_color=Color(0.541176, 0.654902, 0.980392, 1)
