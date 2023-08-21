@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @onready var jump = $jump
 @onready var walking = $walking
-
+@onready var flipPoint = $flipPoint
 
 const SPEED = 100.0
 const JUMP_VELOCITY = -300.0
@@ -24,20 +24,14 @@ func _physics_process(delta):
 	# gets players input direction and handles the movement
 	# DO LATER --> replace UI actions with custom gameplay actions
 	var direction = Input.get_axis("ui_left", "ui_right")
+	if direction > 0:
+		flipPoint.scale.x = 1
+	elif direction < 0:
+		flipPoint.scale.x = -1
+
 	if direction:
 		velocity.x = direction * SPEED
-		$walking.play()
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		
 	move_and_slide()
-
-
-func _on_area_2d_body_entered(body):
-	get_tree().change_scene_to_file("res://Victory.tscn")
-
-func _on_spikes_body_entered(body):
-	get_tree().change_scene_to_file("res://scenes/GameOver.tscn")
-
-func _on_water_body_entered(body):
-	get_tree().change_scene_to_file("res://scenes/GameOver.tscn")
