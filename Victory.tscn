@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsqlyrbipyfi"]
+
+[ext_resource type="FontFile" uid="uid://d3l2ewoiyntta" path="res://art assets/SnakeChan-MMoJ.ttf" id="1_ufbgj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rm1u3"]
+bg_color = Color(0.0627451, 0.0627451, 0.0627451, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0.960784, 0.313726, 1)
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rm1u3")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Rows" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Title" type="Label" parent="PanelContainer/MarginContainer/Rows"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("1_ufbgj")
+theme_override_font_sizes/font_size = 100
+text = "You Weren't 
+Breakfast!"
+horizontal_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/MarginContainer/Rows"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/Rows/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Main Menu" type="Button" parent="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.509804, 0.443137, 1)
+theme_override_fonts/font = ExtResource("1_ufbgj")
+theme_override_font_sizes/font_size = 35
+text = "Main Menu"
+
+[node name="Quit" type="Button" parent="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.509804, 0.443137, 1)
+theme_override_fonts/font = ExtResource("1_ufbgj")
+theme_override_font_sizes/font_size = 35
+text = "Quit
+"

@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=3 uid="uid://cuntklwn77wvw"]
+
+[ext_resource type="Script" path="res://scripts/GameOver.gd" id="1_8e5uf"]
+[ext_resource type="FontFile" uid="uid://d3l2ewoiyntta" path="res://art assets/SnakeChan-MMoJ.ttf" id="1_rjsd2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6m07j"]
+bg_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.815686, 0.117647, 0.219608, 1)
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_8e5uf")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6m07j")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Rows" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Title" type="Label" parent="PanelContainer/MarginContainer/Rows"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.772549, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_rjsd2")
+theme_override_font_sizes/font_size = 100
+text = "You Became 
+Breakfast"
+horizontal_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/MarginContainer/Rows"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/Rows/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Restart" type="Button" parent="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.682353, 0.34902, 0.156863, 1)
+theme_override_fonts/font = ExtResource("1_rjsd2")
+theme_override_font_sizes/font_size = 35
+text = "RESTART 
+"
+
+[node name="Main Menu" type="Button" parent="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.682353, 0.34902, 0.156863, 1)
+theme_override_fonts/font = ExtResource("1_rjsd2")
+theme_override_font_sizes/font_size = 35
+text = "MAIN MENU
+"
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer/Main Menu" to="." method="_on_main_menu_pressed"]

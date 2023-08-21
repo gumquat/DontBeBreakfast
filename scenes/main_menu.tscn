@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cofpdr2bb431l"]
+[gd_scene load_steps=9 format=3 uid="uid://bqb8bshinf8nd"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_q1hbo"]
 [ext_resource type="FontFile" uid="uid://d3l2ewoiyntta" path="res://art assets/SnakeChan-MMoJ.ttf" id="2_23im3"]
-[ext_resource type="Texture2D" uid="uid://defiqjoow31uh" path="res://art assets/AdobeStock_170996237.jpeg" id="3_lpihc"]
+[ext_resource type="Texture2D" uid="uid://defiqjoow31uh" path="res://art assets/background.jpeg" id="3_jnxom"]
+[ext_resource type="Texture2D" uid="uid://bhalw4cf0am7" path="res://art assets/worm.png" id="4_2gmfg"]
+[ext_resource type="Texture2D" uid="uid://yhu5gw8jlh7o" path="res://art assets/birb_image.png" id="5_rsws3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qflbk"]
 bg_color = Color(0, 0, 0, 0.392157)
@@ -38,6 +40,7 @@ theme_override_constants/margin_bottom = 100
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
+theme_override_constants/separation = 30
 alignment = 1
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
@@ -54,7 +57,7 @@ vertical_alignment = 1
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_constants/separation = 20
+theme_override_constants/separation = 15
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -96,10 +99,42 @@ text = "Made By"
 icon_alignment = 1
 expand_icon = true
 
+[node name="MarginContainer4" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 50
+
+[node name="Quit Button" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer4"]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.576471, 0.176471, 0, 1)
+theme_override_fonts/font = ExtResource("2_23im3")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxFlat_qflbk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2u6nw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wp0su")
+text = "QUIT"
+icon_alignment = 1
+expand_icon = true
+
 [node name="Background" type="Sprite2D" parent="."]
 show_behind_parent = true
 position = Vector2(575.75, 324.25)
 scale = Vector2(0.233868, 0.198376)
-texture = ExtResource("3_lpihc")
+texture = ExtResource("3_jnxom")
+
+[node name="Worm" type="Sprite2D" parent="."]
+position = Vector2(120, 504)
+scale = Vector2(0.342105, 0.34106)
+texture = ExtResource("4_2gmfg")
+
+[node name="BirbImage" type="Sprite2D" parent="."]
+position = Vector2(1016, 104)
+scale = Vector2(0.155, 0.145)
+texture = ExtResource("5_rsws3")
+flip_h = true
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer/New Game Button" to="." method="_on_new_game_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer4/Quit Button" to="." method="_on_quit_button_pressed"]
