@@ -46,6 +46,12 @@ layout_mode = 2
 layout_mode = 2
 theme_override_constants/separation = 30
 
+[node name="Tayler" type="Button" parent="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.976471, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Tayler Coon"
+
 [node name="Caramon" type="Button" parent="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.976471, 0, 0, 1)
@@ -57,12 +63,6 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.976471, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 text = "Evan Newman"
-
-[node name="Tayler" type="Button" parent="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.976471, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
-text = "Tayler Coon"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer"]
 layout_mode = 2
@@ -76,7 +76,12 @@ text = "Back
 "
 
 [node name="Seahorse" type="Sprite2D" parent="."]
-position = Vector2(202, 392)
+position = Vector2(264, 376)
+scale = Vector2(1.60938, 1.75781)
+texture = ExtResource("1_p0jtc")
+
+[node name="Seahorse2" type="Sprite2D" parent="."]
+position = Vector2(888, 376)
 scale = Vector2(1.60938, 1.75781)
 texture = ExtResource("1_p0jtc")
 

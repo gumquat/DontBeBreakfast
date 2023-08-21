@@ -607,9 +607,9 @@ physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_3x04i")
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_2djaj"]
-vertices = PackedVector2Array(456, 479, 2, 478, -346, 409, -380, 135, 132, 127, 590, 144, 1235, 466, 959, 485, 1197, 149, 1413, 363, 1699, 466, 1548, 441, 1807, 164, 2337, 462, 2199, 168, 2323, 251)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(6, 7, 0, 5, 8, 9), PackedInt32Array(10, 11, 9, 8, 12, 13), PackedInt32Array(13, 12, 14, 15)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(132, 127, 590, 144, 1197, 149, 1807, 164, 2199, 168, 2323, 251, 2337, 462, 1699, 466, 1548, 441, 1413, 363, 1235, 466, 959, 485, 456, 479, 2, 478, -346, 409, -380, 135)])
+vertices = PackedVector2Array(507, 527, -53, 535, -346, 409, -380, 135, 132, 127, 590, 144, 1403, 447, 1219, 519, 987, 535, 1197, 149, 1807, 164, 1555, 487, 2323, 535, 1635, 535, 2199, 168, 2323, 251)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(6, 7, 8, 0, 5, 9, 10), PackedInt32Array(11, 6, 10), PackedInt32Array(12, 13, 11, 10, 14, 15)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(132, 127, 590, 144, 1197, 149, 1807, 164, 2199, 168, 2323, 251, 2323, 535, 1635, 535, 1555, 487, 1403, 447, 1219, 519, 987, 535, 507, 527, -53, 535, -346, 409, -380, 135)])
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0nxrc"]
 animations = [{
