@@ -13,10 +13,6 @@ collision_layer = 2
 collision_mask = 3
 script = ExtResource("1_3tywe")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -152)
-texture = ExtResource("1_yf1wd")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2.5, -151)
 shape = SubResource("RectangleShape2D_ge4vb")
@@ -26,3 +22,10 @@ stream = ExtResource("3_jt0md")
 
 [node name="walking" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_7qnek")
+
+[node name="flipPoint" type="Marker2D" parent="."]
+position = Vector2(3, -151)
+
+[node name="Sprite2D" type="Sprite2D" parent="flipPoint"]
+position = Vector2(-3, -1)
+texture = ExtResource("1_yf1wd")
