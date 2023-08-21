@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dsqlyrbipyfi"]
+[gd_scene load_steps=5 format=3 uid="uid://dsqlyrbipyfi"]
 
+[ext_resource type="Script" path="res://Victory.gd" id="1_8lfjm"]
 [ext_resource type="FontFile" uid="uid://d3l2ewoiyntta" path="res://art assets/SnakeChan-MMoJ.ttf" id="1_ufbgj"]
+[ext_resource type="Texture2D" uid="uid://bhalw4cf0am7" path="res://art assets/worm.png" id="3_405tk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rm1u3"]
 bg_color = Color(0.0627451, 0.0627451, 0.0627451, 1)
@@ -11,6 +13,7 @@ border_width_bottom = 10
 border_color = Color(0, 0.960784, 0.313726, 1)
 
 [node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_8lfjm")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 anchors_preset = 15
@@ -61,3 +64,11 @@ theme_override_fonts/font = ExtResource("1_ufbgj")
 theme_override_font_sizes/font_size = 35
 text = "Quit
 "
+
+[node name="Worm" type="Sprite2D" parent="."]
+position = Vector2(208, 462)
+scale = Vector2(0.736842, 0.68543)
+texture = ExtResource("3_405tk")
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer/Main Menu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

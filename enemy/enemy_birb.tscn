@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://yhu5gw8jlh7o" path="res://art assets/birb_image.png" id="1_j6iwq"]
 [ext_resource type="Script" path="res://scripts/enemy_birb.gd" id="1_xrk85"]
 
-[sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_udbq4"]
-length = 109.47
+[sub_resource type="CircleShape2D" id="CircleShape2D_w1t6m"]
+radius = 17.0
 
 [node name="EnemyBirb" type="CharacterBody2D"]
 collision_layer = 2
@@ -19,17 +19,19 @@ position = Vector2(-3.8147e-06, 3.8147e-06)
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("1_j6iwq")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(25, 11)
-rotation = -0.247837
-scale = Vector2(1.13, 1.13)
-shape = SubResource("SeparationRayShape2D_udbq4")
-one_way_collision_margin = 0.0
-
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.25
 autostart = true
 
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(14, 12)
+shape = SubResource("CircleShape2D_w1t6m")
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_shape_entered" from="Area2D" to="." method="_on_area_2d_body_shape_entered"]
