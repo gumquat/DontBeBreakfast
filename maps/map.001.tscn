@@ -604,9 +604,9 @@ physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_3x04i")
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_2djaj"]
-vertices = PackedVector2Array(2, 478, -346, 409, -380, 135, 82, 172, 456, 479, 535, 196, 959, 485, 1108, 212, 1235, 466, 1633, 196, 1413, 363, 1699, 466, 1548, 441, 2081, 254, 2337, 462, 2323, 251)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(4, 3, 5, 6), PackedInt32Array(6, 5, 7, 8), PackedInt32Array(8, 7, 9, 10), PackedInt32Array(11, 12, 10, 9, 13, 14), PackedInt32Array(14, 13, 15)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(82, 172, 535, 196, 1108, 212, 1633, 196, 2081, 254, 2323, 251, 2337, 462, 1699, 466, 1548, 441, 1413, 363, 1235, 466, 959, 485, 456, 479, 2, 478, -346, 409, -380, 135)])
+vertices = PackedVector2Array(456, 479, 2, 478, -346, 409, -380, 135, 132, 127, 590, 144, 1235, 466, 959, 485, 1197, 149, 1413, 363, 1699, 466, 1548, 441, 1807, 164, 2337, 462, 2199, 168, 2323, 251)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(6, 7, 0, 5, 8, 9), PackedInt32Array(10, 11, 9, 8, 12, 13), PackedInt32Array(13, 12, 14, 15)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(132, 127, 590, 144, 1197, 149, 1807, 164, 2199, 168, 2323, 251, 2337, 462, 1699, 466, 1548, 441, 1413, 363, 1235, 466, 959, 485, 456, 479, 2, 478, -346, 409, -380, 135)])
 
 [node name="LevelTemplate" type="Node2D"]
 
@@ -623,6 +623,7 @@ texture = ExtResource("2_smdyv")
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_lcbmd")]
 position = Vector2(26, 574)
 scale = Vector2(0.1, 0.1)
+collision_layer = 3
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="CharacterBody2D"]
 remote_path = NodePath("../../Camera2D")
@@ -637,13 +638,14 @@ offset = Vector2(40, -65)
 zoom = Vector2(2, 2)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+visible = false
 top_level = true
 position = Vector2(-4, 25)
 navigation_polygon = SubResource("NavigationPolygon_2djaj")
 
 [node name="NavTarget" type="Marker2D" parent="."]
-position = Vector2(2289, 425)
+position = Vector2(2255, 451)
 
-[node name="EnemyBirb" parent="." node_paths=PackedStringArray("movement_target") instance=ExtResource("4_h6wmr")]
-position = Vector2(-311, 267)
-movement_target = NodePath("../NavTarget")
+[node name="EnemyBirb" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_h6wmr")]
+position = Vector2(-317, 412)
+player = NodePath("../CharacterBody2D")
