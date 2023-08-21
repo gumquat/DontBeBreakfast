@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dsqlyrbipyfi"]
 
-[ext_resource type="Script" path="res://Victory.gd" id="1_8lfjm"]
+[ext_resource type="Script" path="res://scripts/Victory.gd" id="1_8lfjm"]
 [ext_resource type="FontFile" uid="uid://d3l2ewoiyntta" path="res://art assets/SnakeChan-MMoJ.ttf" id="1_ufbgj"]
 [ext_resource type="Texture2D" uid="uid://bhalw4cf0am7" path="res://art assets/worm.png" id="3_405tk"]
 

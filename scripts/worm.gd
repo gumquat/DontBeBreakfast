@@ -33,11 +33,12 @@ func _physics_process(delta):
 	move_and_slide()
 
 
-func _on_area_2d_body_entered(body):
-	get_tree().change_scene_to_file("res://Victory.tscn")
 
 func _on_spikes_body_entered(body):
 	get_tree().change_scene_to_file("res://scenes/GameOver.tscn")
 
 func _on_water_body_entered(body):
 	get_tree().change_scene_to_file("res://scenes/GameOver.tscn")
+
+func _on_victory_flag_body_entered(body):
+	get_tree().change_scene_to_file("res://scenes/Victory.tscn")

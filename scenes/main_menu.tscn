@@ -137,4 +137,5 @@ texture = ExtResource("5_rsws3")
 flip_h = true
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer/New Game Button" to="." method="_on_new_game_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer3/Made By Button" to="." method="_on_made_by_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer4/Quit Button" to="." method="_on_quit_button_pressed"]
