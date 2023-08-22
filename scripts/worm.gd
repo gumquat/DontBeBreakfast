@@ -38,7 +38,8 @@ func _physics_process(delta):
 	if velocity.x != 0 and is_on_floor():
 		if !walking.playing:
 			$walking.play()
-		elif walking.playing:
+	elif velocity.x == 0 or !is_on_floor_only():
+		if walking.playing:
 			$walking.stop()
 		
 	move_and_slide()
