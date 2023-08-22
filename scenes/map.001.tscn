@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b44b5frofthck"]
+[gd_scene load_steps=14 format=3 uid="uid://b44b5frofthck"]
 
 [ext_resource type="Texture2D" uid="uid://vv1ijbasb1b2" path="res://art assets/tiles_packed.png" id="1_v0b4o"]
 [ext_resource type="PackedScene" uid="uid://d4dsvhp76wd8f" path="res://character/worm.tscn" id="3_tsefa"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://bh7vs1rclexi" path="res://art assets/Untitled_design.png" id="5_o8hxw"]
 [ext_resource type="Texture2D" uid="uid://bj70fgiclsp27" path="res://art assets/Derek_Sun.png" id="6_x7vwd"]
 [ext_resource type="Texture2D" uid="uid://dadnd3mokq6ty" path="res://art assets/birdsnest.png" id="7_cilj6"]
-[ext_resource type="AudioStream" uid="uid://nwjjgrqle61r" path="res://sfx/Funny_Chase_Music_A_-_David_Fesliyan.mp3" id="7_dvayh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3x04i"]
 texture = ExtResource("1_v0b4o")
@@ -677,10 +676,6 @@ animation = &"derek_sun"
 autoplay = "derek_sun"
 frame_progress = 0.0911421
 speed_scale = 0.5
-
-[node name="music" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("7_dvayh")
-autoplay = true
 
 [node name="Birdsnest" type="Sprite2D" parent="."]
 position = Vector2(568, 464)

@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://bqb8bshinf8nd"]
+[gd_scene load_steps=10 format=3 uid="uid://bqb8bshinf8nd"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_q1hbo"]
 [ext_resource type="FontFile" uid="uid://d3l2ewoiyntta" path="res://art assets/SnakeChan-MMoJ.ttf" id="2_23im3"]
 [ext_resource type="Texture2D" uid="uid://defiqjoow31uh" path="res://art assets/background.jpeg" id="3_jnxom"]
 [ext_resource type="Texture2D" uid="uid://bhalw4cf0am7" path="res://art assets/worm.png" id="4_2gmfg"]
 [ext_resource type="Texture2D" uid="uid://yhu5gw8jlh7o" path="res://art assets/birb_image.png" id="5_rsws3"]
+[ext_resource type="AudioStream" uid="uid://dxbvqabhbvrr2" path="res://sfx/tv-talk-show-intro-theme-richard-bodgers-1-00-10.mp3" id="6_8anyg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qflbk"]
 bg_color = Color(0, 0, 0, 0.392157)
@@ -135,6 +136,10 @@ position = Vector2(1016, 104)
 scale = Vector2(0.155, 0.145)
 texture = ExtResource("5_rsws3")
 flip_h = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_8anyg")
+autoplay = true
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer/New Game Button" to="." method="_on_new_game_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer3/Made By Button" to="." method="_on_made_by_button_pressed"]

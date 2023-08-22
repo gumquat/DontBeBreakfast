@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://dsqlyrbipyfi"]
+[gd_scene load_steps=8 format=3 uid="uid://dsqlyrbipyfi"]
 
 [ext_resource type="Script" path="res://scripts/Victory.gd" id="1_8lfjm"]
 [ext_resource type="FontFile" uid="uid://d3l2ewoiyntta" path="res://art assets/SnakeChan-MMoJ.ttf" id="1_ufbgj"]
 [ext_resource type="Texture2D" uid="uid://bhalw4cf0am7" path="res://art assets/worm.png" id="3_405tk"]
+[ext_resource type="AudioStream" uid="uid://bsjor1kr6mxix" path="res://sfx/nice-enthusiastic-male-dan-barracuda-1-00-02.mp3" id="4_nkhen"]
+[ext_resource type="AudioStream" uid="uid://c37nls7v8brgu" path="res://sfx/ta-da-dum-dum-soundroll-1-00-06.mp3" id="4_wc3cs"]
+[ext_resource type="Script" path="res://scenes/niiiiiice.gd" id="5_n3ikf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rm1u3"]
 bg_color = Color(0.0627451, 0.0627451, 0.0627451, 1)
@@ -69,6 +72,15 @@ text = "Quit
 position = Vector2(208, 462)
 scale = Vector2(0.736842, 0.68543)
 texture = ExtResource("3_405tk")
+
+[node name="niiiiiice" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_nkhen")
+autoplay = true
+script = ExtResource("5_n3ikf")
+
+[node name="tadadumdum" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_wc3cs")
+autoplay = true
 
 [connection signal="pressed" from="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer/Main Menu" to="." method="_on_main_menu_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
