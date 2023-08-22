@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cjaolqg07e5r7"
+path="res://.godot/imported/CLICK Nice.mp3-aac92f9dcb69d59f130933fe440573f7.mp3str"
+
+[deps]
+
+source_file="res://sfx/CLICK Nice.mp3"
+dest_files=["res://.godot/imported/CLICK Nice.mp3-aac92f9dcb69d59f130933fe440573f7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
