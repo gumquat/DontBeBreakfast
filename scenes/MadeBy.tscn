@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bhu6heyunablg"]
 
-[ext_resource type="Script" path="res://scenes/MadeBy.gd" id="1_4f8c4"]
+[ext_resource type="Script" path="res://scripts/MadeBy.gd" id="1_4f8c4"]
 [ext_resource type="Texture2D" uid="uid://djvq7v5qdprm2" path="res://art assets/seahorse.png" id="1_p0jtc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ted84"]
