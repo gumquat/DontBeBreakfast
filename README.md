@@ -32,7 +32,7 @@ One of the most significant challenges we encountered was ensuring that our proj
 
 Throughout development, we encountered several funny bugs that tested our problem-solving skills. One particularly memorable bug involved the walking sound, which would inexplicably start and stop infinitely. We ended up implementing improved if guards to ensure the audio played appropriately only when the character was moving, enhancing the overall gameplay experience. Additionally, I devised a method to halt the sound when the character was airborne or stationary, further refining the game's audio dynamics.
 
-[AudioBug](https://iili.io/J81i3Cu.png)
+![AudioBug](https://iili.io/J81i3Cu.png)
 
 Another audio bug surfaced when the game's music faded as players moved away from the starting position. Caramon devised a clever solution by attaching the audio to the bird itself. This not only resolved the issue but also added an immersive element to the gameplay, intensifying the chase as the bird drew closer.
 
