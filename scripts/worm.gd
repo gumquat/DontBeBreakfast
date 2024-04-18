@@ -34,7 +34,7 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		
-#	FIND HOW TO IMPLEMENT THIS	BETTER
+# Walking Audio Handling
 	if velocity.x != 0 and is_on_floor():
 		if !walking.playing:
 			$walking.play()
